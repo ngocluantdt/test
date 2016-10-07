@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+      
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        
+       
+       
+          <style>
+              div.wrapper{
+                  position: relative;
+                  width: 560px;
+                  height: 560px;
+              }
+            img.quay{
+                transition: all 5s;
+            }
+            .tam{
+                position: absolute;
+                top:182px;
+                left:184px;
+            }
+            .kim{
+                  position: absolute;
+                top:232px;
+                right:-46px;
+            }
+            .tam:hover{
+               cursor: pointer;
+            }
+        </style>
+        <div class='wrapper'>
+            <img class='quay' src='images/Coke_rollingcasster_background.png'/>
+            <a href=""><img class='tam' src='images/Coke_rollingcasster_button.png'/></a>
+            <img class='kim' src='images/Coke_rollingcasster_clip.png'>
+        </div>
+         <script language='javascript'>
+            
+            function rotate_action(){
+                var ran = 0;
+                while (ran < 1000) {
+                    ran = Math.floor((Math.random() * 10000) + 1)
+                }
+                $('img.quay').css('transform', 'rotate(' + ran + 'deg)');
+            }
+  
+            $(document).ready(function(){
+                rotate_action();
+            })            
+   
+        </script>
+    </body>
+</html>
